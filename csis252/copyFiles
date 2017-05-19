@@ -1,0 +1,98 @@
+#!/bin/bash
+
+
+SOURCEDIR=/home/remote/brekke/CSIS252
+
+DESTDIR=/home/remote/rosskyl/csis252/examples
+
+FILEEXTENSION=*.cpp
+
+DIRECTORIESTOSKIP="old private"
+
+cd $SOURCEDIR #change to brekke's directory
+
+#Brekke's StarID=ev5298ke
+
+
+# ##copies files do not exist in the desination directory
+# echo "Files being copied"
+# echo -------------------
+# for FILE in $FILEEXTENSION
+# do
+#     if [ ! -f $DESTDIR/$FILE ]
+#     then
+# 	cp $FILE $DESTDIR
+# 	echo $FILE copied
+#     fi
+# done
+# 
+# 
+# ##copies files if they exist but the source directory are newer than
+# ##the version in the desination directory
+# echo "\nFiles being updated"
+# echo -----------------------
+# for FILE in $FILEEXTENSION
+# do
+#     if [ $FILE -nt $DESTDIR/$FILE ]
+#     then
+# 	cp $FILE $DESTDIR
+# 	echo $FILE updated
+#     fi
+# done
+
+contains() {
+#first argument is list and second is item
+    for ITEM in $1
+    do
+	if [ $ITEM == $2 ]
+	then
+	    return 0
+	fi
+    done
+    return 1
+}
+
+copy() {
+    local DIRECTORY=$1
+    for FILE in `ls $DIRECTORY`
+    do
+	if [ ! -f $DESTDIR/$DIRECTORY/$FILE ]
+	then
+	    if [ -f $DIRECTORY/$FILE ]
+	    then
+		echo "$DIRECTORY/$FILE copied"
+		cp $DIRECTORY/$FILE $DESTDIR/$DIRECTORY/$FILE
+	    fi
+	    if [ -d $DIRECTORY/$FILE ]
+	    then
+		if [ ! -d $DESTDIR/$DIRECTORY/$FILE ]
+		then
+		    echo "$DIRECTORY/$FILE directory made"
+		    mkdir $DESTDIR/$DIRECTORY/$FILE
+		fi
+		copy $DIRECTORY/$FILE
+	    fi
+	else
+	    if [ $DIRECTORY/$FILE -nt $DESTDIR/$DIRECTORY/$FILE ]
+	    then
+		cp $DIRECTORY/$FILE $DESTDIR/$DIRECTORY/$FILE
+		echo "$DIRECTORY/$FILE updated"
+	    fi
+	fi
+    done
+}
+
+
+cd $SOURCEDIR
+
+copy .
+
+cd $DESTDIR
+
+for DIRECT in $DIRECTORIESTOSKIP
+do
+    rm -r $DIRECT
+done
+
+cp *.tar.gz tarFiles
+rm *.tar.gz

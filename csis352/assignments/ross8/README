@@ -1,0 +1,53 @@
+Author:      Kyle Ross
+Assignment:  8
+Professor:   Brekke
+Due:         May 3, 2016
+Filename:    README
+Description: Readme
+
+
+
+BUILDING THE PROGRAM
+    This program was written in C++ and distributed to be built on a 
+    Linux system.  To build the program, type 'make' to create the 
+    executable called 'prog8'
+
+RUNNING THE PROGRAM
+    Type 'prog8' at the command prompt after building the program.
+
+PROGRAM DESCRIPTION
+    This program creates and implements a HashTable class.  The main function
+    tests the class.  HashTable is a hash table list.
+    
+PROGRAM INPUT
+    None
+	
+PROGRAM OUTPUT
+    Outputs various tests onto the screen.
+    
+PROGRAM DESIGN
+    Function and class method input and output, preconditions and postconditions can
+    be found in the documentation for each file.
+    The hash table was implemented as a hash bucket.  It is 2 dimensional vector.
+    If there are any collisions, the item is inserted into the position of hash*2.
+    If there is a collision there, the item is inserted into hash*3 and so on.
+    
+FILE INDEX
+    file		function(s)		description
+    -----------------	-------------------	-------------------------  
+    hashtable.h		HashTable		specification and implementation of HashTable class
+    
+    main.cpp		main			main function
+    
+    makefile					file to make executable
+    
+    README					this file
+    
+    symbol.cpp		Symbol			implementation of Symbol class
+    
+    symbol.h		Symbol			specification of Symbol class
+    
+PROGRAM TESTING
+    This program was tested with different sets of data.
+
+    There are no known bugs.

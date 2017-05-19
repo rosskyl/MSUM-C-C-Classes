@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+SOURCEDIR=/home/remote/rosskyl/csis252/examples/tarFiles
+
+DESTDIR=/home/remote/rosskyl/csis252/examples
+
+
+cd $DESTDIR
+
+for FILE in `ls $SOURCEDIR`
+do
+    tar xzvf $SOURCEDIR/$FILE
+done

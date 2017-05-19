@@ -1,0 +1,11 @@
+#!/bin/bash
+
+###TODO check to make sure ross$1 exists
+
+
+FILENAME=ross
+END_LOCATION=turnin/
+FILE_EXTENSION=.tar.gz
+
+
+tar -czf $END_LOCATION$FILENAME$1$FILE_EXTENSION $FILENAME$1

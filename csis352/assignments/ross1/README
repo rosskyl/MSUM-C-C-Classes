@@ -1,0 +1,45 @@
+File:    README
+Author:  Kyle Ross
+Program: assignment 1
+Date:    1/21/2016
+
+
+BUILDING THE PROGRAM
+    This program was written in C++ and distributed to be built on a 
+    Linux system.  To build the program, type 'make' to create the 
+    executable called 'prog1'
+
+RUNNING THE PROGRAM
+    Type 'prog1' at the command prompt after building the program.
+
+PROGRAM DESCRIPTION
+    This program creates and implements a currency class.  The main function
+    tests the class.
+    
+PROGRAM INPUT
+    None
+	
+PROGRAM OUTPUT
+    Outputs various tests onto the screen.
+    
+PROGRAM DESIGN
+    Function and class method input and output, preconditions and postconditions can
+    be found in the documentation for each file.
+    
+FILE INDEX
+    file		function(s)		description
+    -----------------	-------------------	-------------------------
+    currency.h		currency		currency class specification
+    
+    currency.cpp	currency mehtods	currency class implementation
+    
+    currencymain.cpp	main			main function
+    
+    makefile					file to make executable
+    
+    README					this file
+    
+PROGRAM TESTING
+    This program was tested with different sets of data.  
+
+    There are no known bugs

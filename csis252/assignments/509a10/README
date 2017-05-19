@@ -1,0 +1,85 @@
+File:    README
+Author:  Kyle Ross
+Program: assignment 10
+Date:    11/24/2014
+
+
+BUILDING THE PROGRAM
+    This program was written in C++ and distributed to be built on a 
+    Linux system.  To build the program, type 'make' to create the 
+    executable called 'prog10'
+
+RUNNING THE PROGRAM
+    Type 'prog10' at the command prompt after building the program.
+    Also need the input filename and output filename after 'prog10'.
+
+PROGRAM DESCRIPTION
+    This program will read sentences from the input file and output
+    them to the output file along with whether or not they are a 
+    palindrome.
+    
+PROGRAM INPUT
+    Input comes from the given input file.  Input is a sentence including all
+    spaces until a period or the end of file is read.
+    
+PROGRAM OUTPUT
+    Output is if the sentence is a palindrome and then a sentence. For example:
+	palindrome
+	-----------------
+	racecar.
+	
+	
+	-----------------
+	hello.
+	
+PROGRAM DESIGN
+    This program uses the ADT arrayListType.  All sentences are stored in a 
+    list of type arrayListType.
+
+    The general algorithm
+	read the input file for sentences and store them into an arrayListType
+        output sentences
+
+    Function input and output, preconditions and postconditions can
+    be found in the documentation for each file.
+    
+FILE INDEX
+    file		function(s)	description
+    -----------------	-------------	-------------------------
+    arrayListType.h			arrayListType class
+    
+    main.cpp		main		main
+    
+    makefile				makefile
+    
+    output.cpp		output		outputs all the sentences and whether
+					or not they are a palindrome to a file
+	
+    prototypes.h			contains function prototypes
+    
+    queueType.h				queueType class
+    
+    read.cpp		read		reads the input file for sentences
+    
+    README				this file
+    
+    sentence.cpp			impementation for Sentence
+    
+    sentence.h				specification for Sentence
+    
+    stackType.h				stackType class
+    
+PROGRAM TESTING
+    This program was tested with different sets of data.  
+
+    Checked for a normal set of data in the file
+   
+    Checked for data file not existing
+   
+    Checked for the data file existing but not containing any values
+   
+    Checked for the data file containing 1 value
+    
+    Checked for not enough arguments
+
+    There are no known bugs

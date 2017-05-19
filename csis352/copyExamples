@@ -1,0 +1,14 @@
+#!/bin/bash
+COPY_FROM=/home/remote/brekke/CSIS352/*
+COPY_TO=/home/remote/rosskyl/csis352/examples
+TAR_FILES=$COPY_TO/tarfiles/
+
+cp $COPY_FROM $COPY_TO
+
+cd $COPY_TO
+for TAR in `ls $COPY_TO/*.tar.gz`
+do
+    tar -xzf $TAR
+done
+
+mv *.tar.gz $TAR_FILES

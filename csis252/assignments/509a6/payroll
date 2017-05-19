@@ -1,0 +1,12 @@
+Employee Summary Totals
+-----------------------
+Total Gross Pay:                       267.65
+Total Federal Withholding:              80.30
+Total Social Security Withheld:         21.41
+Total Net Pay:                         165.94
+
+
+ID   Name                  Hours   Wage   Gross   Fed     SS      Net     
+---- --------------------  ------  -----  ------  ------  ------  ------
+1    john doe              4.50    6.70   30.15   9.04    2.41    18.69   
+4    jane doe              45.00   5.00   237.50  71.25   19.00   147.25  

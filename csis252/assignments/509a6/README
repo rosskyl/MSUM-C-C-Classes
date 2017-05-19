@@ -1,0 +1,98 @@
+File:	     README
+Author:      Kyle Ross
+Assignment:  6
+Professor:   Brekke
+Due:         Oct 24, 2014
+Description: readme file for program
+
+
+BUILDING THE PROGRAM
+   This program was written in C++ and distributed to be built on a 
+   Linux system.  To build the program, type 'make' to create the 
+   executable called 'prog6'
+
+RUNNING THE PROGRAM
+   Type 'prog6' at the command prompt after building the program.
+
+PROGRAM DESCRIPTION
+   This program will read employee id, name, hours, and wage from the file
+   'data' and calculate the gross pay, federal tax, social security, and 
+   net pay for each employee and calculate the total gross pay, federal tax,
+   social security, and net pay for all employees and output this information
+   to a file 'payroll'.
+   
+PROGRAM INPUT
+   All input comes from the file 'input' that must exist prior to the
+   execution of the program.  The program will read the input file
+   until end of file is reached.  The format of the input file follows:
+      Employee ID
+      Employee Name
+      Employee Hours
+      Employee Wage
+      
+   For Example
+      3
+      John Doe
+      37.8
+      7.25
+      
+PROGRAM OUTPUT
+   All output is written to 'payroll' containing the summary information
+   and payroll information for each employee.  Summary info includes total
+   gross pay, total federal tax, total social security, and total net pay for
+   all employees.  Payroll info includes ID, name, hours, wage, gross pay,
+   federal tax, social security, and net pay.
+   For Example
+      Employee Summary Totals
+      -----------------------
+      Total Gross Pay:                       404.48
+      Total Federal Withholding:             121.34
+      Total Social Security Withheld:         32.36
+      Total Net Pay:                         250.78
+
+
+      ID   Name                  Hours   Wage   Gross   Fed     SS      Net     
+      ---- --------------------  ------  -----  ------  ------  ------  ------
+      1    john doe              5.70    5.70   32.49   9.75    2.60    20.14 
+
+FILE INDEX
+file			function		description
+---------------------	-------------------	---------------------------
+calcEmployeeInfo.cpp	calcEmployeeInfo	calculates employee info
+
+calcEmployeeSummary.cpp	CalcEmployeeSummary	calculates employee summary info
+
+constants.h		declarations		declares constants
+
+data			file			contains data to be read
+
+decl.h			declarations		declares structs
+
+main.cpp		main			main function
+
+makefile		make			creates executable
+
+payroll			file			contains output data
+
+printEmployees.cpp	printEmployees		prints employee info to file
+
+printSummary.cpp	printSummary		prints employee summary to file
+
+prototypes.h		declarations		declares prototypes
+
+read.cpp		read			reads data from file data
+
+PROGRAM TESTING
+   This program was tested with different sets of data.
+   
+   Checked for a normal set of data in the file
+   
+   Checked for the number of values exceeding the array size
+   
+   Checked for data file not existing
+   
+   Checked for the data file existing but not containing any values
+   
+   Checked for the data file containing 1 value
+   
+   If 'data' file is not formatted correctly program will give false results

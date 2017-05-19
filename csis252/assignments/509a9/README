@@ -1,0 +1,109 @@
+File:    README
+Author:  Kyle Ross
+Program: assignment 9
+Date:    11/17/2014
+
+BUILDING THE PROGRAM
+   This program was written in C++ and distributed to be built on a 
+   Linux system.  To build the program, type 'make' to create the 
+   executable called 'prog9'
+
+RUNNING THE PROGRAM
+   Type 'prog9' at the command prompt after building the program.
+
+PROGRAM DESCRIPTION
+   This program will read employee info from the file 'data' and calculate
+   payroll info including gross pay, federal tax, social security, and net pay
+   and output this info to the file 'payroll'
+
+PROGRAM INPUT
+   All input comes from the file 'data' that must exist prior to the
+   execution of the program.  The program will read the input file
+   until end of file is reached.  The format of the input file follows:
+      Employee Name
+      Employee Birthdate (yyyy-mm-dd format)
+      Employee Hourly Wage
+      Employee Hours
+   For example:
+      Barb Wire
+      1975-5-1
+      40
+      10.75
+      Nick O. Time
+      1985-2-16
+      30
+      9.50
+   
+PROGRAM OUTPUT
+   All output is written to 'payroll' containing the summary. This
+   includes the name, birth year, hours, wage, gross pay, federal tax,
+   social security, and net pay for each employee
+   For example:
+      Name                  Year  Hours   Wage    Gross  FedTax   SSTax     Net
+      -------------------  ----- ------ ------ -------- ------- ------- -------
+      Barb Wire             1975  40.00  10.75   430.00  129.00   34.40  266.60
+      Nick O. Time          1985  30.00   9.50   285.00   85.50   22.80  176.70
+
+PROGRAM DESIGN
+   This program uses the ADT arrayListType.  The class employeeType inherits 
+   from class personType.  Class personType has a composition of dateType.
+   All employees are stored in a list of type arrayListType.
+
+   The general algorithm
+      read the employees into an arrayListType
+      output employee info
+
+   Function input and output, preconditions and postconditions can
+   be found in the documentation for each file.
+
+FILE INDEX
+   file			function(s)	description
+   ----------------	-----------	----------------------
+   arrayListType.h			contains arrayListType class
+   
+   constants.h				constant declarations
+   
+   data					the input file
+   
+   dateType.cpp				dateType implementation
+   
+   dateType.h				dateType specification
+   
+   employeeType.cpp			employeeType implementation
+   
+   employeeType.h			employeeType specification
+
+   main.cpp		main		calls all other functions
+   
+   makefile				creates executable
+
+   output.cpp		output		outputs results to the file 'payroll'
+   
+   payroll				output file
+   
+   personType.cpp			personType implementation
+   
+   personType.h				personType specification
+   
+   prototypes.h				function prototypes
+   
+   read.cpp		read		read the file 'data' into the array
+   
+   README				this file
+
+
+PROGRAM TESTING
+   This program was tested with different sets of data.  
+
+   Checked for a normal set of data in the file
+   
+   Checked for the number of values exceeding the array size
+   
+   Checked for data file not existing
+   
+   Checked for the data file existing but not containing any values
+   
+   Checked for the data file containing 1 value
+
+   There are no known bugs
+

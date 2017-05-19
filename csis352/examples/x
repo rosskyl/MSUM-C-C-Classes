@@ -1,0 +1,19 @@
+#include <fstream>
+using namespace std;
+int main()
+{
+   ifstream ifs;
+   ofstream ofs;
+   int num;
+   ifs.open("data");
+   ofs.open("result");
+   ifs >> num;
+   while (!ifs.eof())
+   {
+      ofs << num << endl;
+      ifs >> num;
+   }
+   ofs.close();
+   ifs.close();
+   return 0;
+}

@@ -1,0 +1,89 @@
+File:    README
+Author:  Kyle Ross
+Program: assignment 11
+Date:    12/8/2014
+
+
+BUILDING THE PROGRAM
+    This program was written in C++ and distributed to be built on a 
+    Linux system.  To build the program, type 'make' to create the 
+    executable called 'prog11'
+
+RUNNING THE PROGRAM
+    Type 'prog11' at the command prompt after building the program.
+    Also need the input filename after 'prog11'.
+
+PROGRAM DESCRIPTION
+    This program will read a max test score and students' names, dragon ID,
+    and test score from the input file and output their name, dragon ID,
+    score, percentage, and grade to the cout.
+    
+PROGRAM INPUT
+    Input comes from the given input file.  Input needs to be in the form:
+	maxScore
+	name;dragonID;score
+	last, first;dragonID;score
+	
+PROGRAM OUTPUT
+    This program will output each student's name, dragon ID, score, 
+    percentage, and grade along with headers.
+    
+PROGRAM DESIGN
+    This program uses the ADTs binaryTree and binarySearchTree.  All students
+    are stored in a binarySearchTree.
+
+    The general algorithm
+	read the input file for max score
+	read input file for each student
+	print each student's info calculating the percentage and grade
+
+    Function input and output, preconditions and postconditions can
+    be found in the documentation for each file.
+    
+FILE INDEX
+    file		function(s)	description
+    -----------------	-------------	-------------------------
+    binarySearchTree.h			bSearchTreeType class
+    
+    binaryTree.h			binaryTreeType class
+    
+    data				input file
+    
+    dateType.cpp			dateType implementation
+    
+    dateType.h				dateType specification
+    
+    main.cpp		main		main
+    
+    makefile				
+    
+    output.cpp		output		prints each student's info to the cout
+    
+    personType.cpp			personType implementation
+    
+    personType.h			personType specification
+    
+    prototypes.h			contains all function prototypes
+    
+    read.cpp		read		reads the input file for each student
+    
+    README				this file
+    
+    studentType.cpp			studentType implementation
+    
+    studentType.h			studentType specification
+    
+PROGRAM TESTING
+    This program was tested with different sets of data.  
+
+    Checked for a normal set of data in the file
+   
+    Checked for data file not existing
+   
+    Checked for the data file existing but not containing any values
+   
+    Checked for the data file containing 1 value
+    
+    Checked for not enough arguments
+
+    There are no known bugs
